@@ -10,6 +10,8 @@
 
     <properties>
         <java.version>17</java.version>
+        <junit-jupiter.version>5.4.1</junit-jupiter.version>
+        <assertj.version>3.23.1</assertj.version>
     </properties>
 
     <build>
@@ -24,4 +26,19 @@
             </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>
