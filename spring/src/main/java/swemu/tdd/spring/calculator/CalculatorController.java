@@ -1,4 +1,4 @@
-package swemu.tdd.spring;
+package swemu.tdd.spring.calculator;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,9 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class CalculatorController {
     private static final Logger logger = LoggerFactory.getLogger(CalculatorController.class);
 
+    private final Calculator calculator;
+
+    public CalculatorController(Calculator calculator) {
+        this.calculator = calculator;
+    }
+
     @PostMapping("/add")
     public ResponseEntity<Result> add(@RequestBody Operands operands) {
         logger.info("Adding {}", operands);
-        return ResponseEntity.ok(new Result(0.0));
+        var result = calculator.add(operands.values());
+        return ResponseEntity.ok(new Result(result));
     }
 }

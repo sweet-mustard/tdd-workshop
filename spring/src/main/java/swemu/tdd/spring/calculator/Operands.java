@@ -1,4 +1,4 @@
-package swemu.tdd.spring;
+package swemu.tdd.spring.calculator;
 
 import java.util.List;
 
