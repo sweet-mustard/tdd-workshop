@@ -1,7 +1,6 @@
 package swemu.tdd.spring.calculator;
 
 import org.springframework.stereotype.Component;
-import swemu.tdd.spring.calculator.Calculator;
 
 import java.util.List;
 
